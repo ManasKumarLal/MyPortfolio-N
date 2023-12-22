@@ -3,7 +3,7 @@ import './LandingPage.css'
 import BgVideo from './homebg.mp4'
 import { TypeAnimation } from 'react-type-animation';
 import { BsLinkedin, BsYoutube, BsGithub, BsWhatsapp } from "react-icons/bs";
-import Button from '../../components/button/button';
+import Button from '../../components/button/Button';
 import IMG1 from './04.jpg'
 
 const Home = () => {
@@ -65,7 +65,7 @@ const Home = () => {
                             </a>
                         </div>
                     </div>
-                    
+
                     <div className="image">
                         <img src={IMG1} alt="" />
                     </div>
