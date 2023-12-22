@@ -1,0 +1,66 @@
+:root {
+    --contact-primary-bg-color: #424242;
+    --contact-secondary-bg-color: #262626;
+}
+
+.contact_container {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--contact-secondary-bg-color);
+    /* color: white; */
+}
+
+.contact_container h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    font-size: 50px;
+}
+
+.contact_container figure {
+    height: 85%;
+    width: 100%;
+    width: 100%;
+    display: flex;
+    align-tracks: center;
+    justify-content: center;
+}
+
+.contact_container figure .wrapper {
+    height: 90%;
+    width: 90%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20rem;
+    background-color: var(--contact-primary-bg-color);
+    position: relative;
+}
+
+.contact_container figure .wrapper .personal_details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact_container figure .wrapper .personal_details .single_detail_logo {
+    background-color: #363636;
+    font-size: 32px;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.contact_container figure .wrapper .line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 3px;
+    background-color: black;
+}
