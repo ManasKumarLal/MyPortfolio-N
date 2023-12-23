@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import './Navbar.css'
 import NavRoutes from '../../jsons/nav'
 import mklLogo from './mkl.jpg'
+import Button from '../button/Button'
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
   const navbarRef = useRef(null);
@@ -33,13 +35,20 @@ const Navbar = () => {
         </div>
         <div className="routes">
           {
-            NavRoutes.map((item, index) => (
-              <a key={index} href={item.path}>{item.name}</a>
-            ))
+            NavRoutes.map((item, index) => {
+              return <ScrollLink
+                key={index}
+                className='cursor-pointer'
+                to={item.path}
+                smooth={true}
+                duration={0}>
+                {item.name}
+              </ScrollLink>
+            })
           }
         </div>
         <div className="contact">
-          <button className='btn'>Contact me</button>
+          <Button route="contact" text="Contact" h="40px" w="120px" />
         </div>
       </div>
     </>

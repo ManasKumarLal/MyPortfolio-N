@@ -1,5 +1,5 @@
 .Design_container {
-    height: 90vh;
+    height: 70vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -13,11 +13,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     /* background-color: green; */
 }
-.Design_container .image img{
-    width: 90%;
-   filter: grayscale(0%) invert(15%) sepia(0%) saturate(150%) hue-rotate(160deg) brightness(1.2);
+
+.Design_container .image img:first-child {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    filter: grayscale(0%) invert(15%) sepia(60%) saturate(180%) hue-rotate(160deg) brightness(1.2);
+}
+
+.Design_container .image img:last-child {
+    width: 60%;
+    transform: translate(20%);
+    filter: grayscale(0%) invert(15%) sepia(60%) saturate(180%) hue-rotate(160deg) brightness(1.2);
 }
 
 .Design_container .text {
@@ -29,30 +39,35 @@
     justify-content: center;
     padding: 0 10rem;
     position: relative;
-    transform: translateY(-10%);
     /* background-color: yellowgreen; */
 }
-.Design_container .text img{
+
+.Design_container .text img {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     right: 20%;
-    width: 15%;
+    width: 30%;
+    transform: translateY(100%);
     filter: grayscale(0%) invert(15%) sepia(0%) saturate(150%) hue-rotate(160deg) brightness(1.2);
 }
-.Design_container .text h3{
+
+.Design_container .text h3 {
     font-size: 30px;
     padding-bottom: 20px;
     color: #05F3E7;
 }
-.Design_container .text h1{
+
+.Design_container .text h1 {
     font-size: 60px;
     line-height: 60px;
 }
-.Design_container .text p{
+
+.Design_container .text p {
     font-size: 20px;
     font-family: gilroy;
     margin: 40px 0 60px 0;
 }
-.Design_container .text p span{
+
+.Design_container .text p span {
     color: #05F3E7;
 }

@@ -30,7 +30,7 @@ const ProjectContent = () => {
 
     return (
         <>
-            <section className={`projectContent_container projectContent_bottom ${showMoreOption === "showless" ? "h-full" : "h-[77vh]"}`} ref={containerRef}>
+            <section className={`projectContent_container   ${showMoreOption === "showmore" && "projectContent_bottom"} ${showMoreOption === "showless" ? "h-full" : "h-[77vh]"}`} ref={containerRef}>
                 <div className="projectContent_wrapper" ref={contentRef}>
                     {
                         filteredProjects.length <= 0

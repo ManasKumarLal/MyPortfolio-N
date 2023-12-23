@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import projects from '../../jsons/projects';
 import { BsGithub } from "react-icons/bs";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import "./EachProject.css"
+import { Link } from 'react-router-dom';
 
 const EachProject = () => {
+    const { pathname } = useLocation();
     const { id } = useParams();
     const [projectData, setProjectData] = useState({});
     console.log(projectData)
@@ -15,10 +17,20 @@ const EachProject = () => {
     }
     useEffect(() => {
         getData();
-    }, [])
+        window.scrollTo(0, 0);
+    }, [pathname])
     return (
         <>
-            <div className='single_project_container'>
+            <div className='single_project_container relative'>
+
+                <Link to='/'>
+                    <img
+                        className='w-10 rounded-full absolute right-[10%] top-[10%] cursor-pointer'
+                        src="https://i.pinimg.com/originals/a8/8a/8c/a88a8cd82ccd942fe3593d73fc1fb8f7.png"
+                        alt="Error loading logo"
+                    />
+                </Link>
+
                 <h1>{id}. Another ones, I've build</h1>
                 <div className="content">
                     <div className="image">

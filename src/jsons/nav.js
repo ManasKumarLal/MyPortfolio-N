@@ -1,19 +1,19 @@
 const routes = [
     {
-        path:"/#",
-        name:"Home"
+        path: "landingpage",
+        name: "Home"
     },
     {
-        path:"#about",
-        name:"About"
+        path: "about",
+        name: "About"
     },
     {
-        path:"#contact",
-        name:"Contact"
+        path: "contact",
+        name: "Contact"
     },
     {
-        path:"#project",
-        name:"Projects"
+        path: "project",
+        name: "Projects"
     },
 ]
 export default routes;

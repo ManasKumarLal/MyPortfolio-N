@@ -1,0 +1,13 @@
+
+
+
+footer .pseudoLine::after{
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    width: 60%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: lightseagreen;
+}

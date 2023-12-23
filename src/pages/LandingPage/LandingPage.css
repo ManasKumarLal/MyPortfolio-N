@@ -1,5 +1,5 @@
 .home_container {
-    height: 90vh;
+    height: 95vh;
     width: 100%;
     position: relative;
 }
@@ -18,8 +18,8 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 5rem;
-    background:linear-gradient(to top,black,rgba(0, 0, 0, 0.543),transparent);
+    height: 10rem;
+    background:linear-gradient(to top,black,rgba(0, 0, 0, 0.44),rgba(0, 0, 0, 0.578),transparent);
 }
 
 .home_container video {

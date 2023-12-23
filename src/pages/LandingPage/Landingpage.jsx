@@ -15,7 +15,7 @@ const Home = () => {
     ]
     return (
         <>
-            <section className='home_container'>
+            <section id='landingpage' className='home_container'>
                 <video src={BgVideo} autoPlay muted loop></video>
                 <div className='content'>
                     <div className='text'>
@@ -45,9 +45,9 @@ const Home = () => {
                         </p>
 
                         <div className='buttons'>
-                            <Button route="#about" text="More About Me" />
-                            <Button route="#contact" text="Hire Me" />
-                            <Button route="#project" text="See My Projects" />
+                            <Button route="about" text="More About Me" />
+                            <Button route="contact" text="Hire Me" />
+                            <Button route="project" text="See My Projects" />
                         </div>
 
                         <div className="icons">

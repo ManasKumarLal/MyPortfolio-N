@@ -8,6 +8,10 @@
   display: none;
 }
 
+html {
+  background-color: black;
+}
+
 html,
 body {
   width: 100%;
