@@ -7,7 +7,7 @@ const Design = () => {
         <div className='Design_container'>
             <div className="image">
                 {/* <img src="https://assets.99static.com/workbench/assets/images/designer-search-logged-out-header-9e99c15bdf.png" alt="" /> */}
-                <img src="https://dizme.vercel.app/img/brushes/about/1.png" alt="" />
+                <img src="https://cdn-keimj.nitrocdn.com/iaLxREIEPFypcmrLRaUoqNwvvoOlSWhj/assets/images/optimized/rev-f55f44d/shtheme.com/demosd/dizme/wp-content/uploads/2022/05/2-5.png" alt="" />
                 <img src="https://static.vecteezy.com/system/resources/previews/023/401/371/non_2x/cute-cat-wearing-glasses-and-headset-fun-colorful-concept-ideal-for-print-designs-like-t-shirt-designs-stickers-etc-generative-ai-free-png.png" alt="" />
             </div>
             <div className="text">

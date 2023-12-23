@@ -3,6 +3,7 @@ import './Contact.css'
 import { MdCall, MdEmail, MdLocationPin } from "react-icons/md";
 import Form from './components/Form';
 import SingleDetail from './components/SingleDetail';
+import Icons from './components/Icons';
 
 
 const Contact = () => {
@@ -27,6 +28,9 @@ const Contact = () => {
                                 detail="Bhagalpur, Bihar, india"
                                 logo={<MdLocationPin className='single_detail_logo' />}
                             />
+                            <div className="icons">
+                                <Icons/>
+                            </div>
                         </div>
 
                         <div className='line'></div>

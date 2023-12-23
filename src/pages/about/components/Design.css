@@ -19,14 +19,14 @@
 
 .Design_container .image img:first-child {
     position: absolute;
-    top: 0;
-    left: 10%;
+    top: -10%;
+    left: 5%;
     filter: grayscale(0%) invert(15%) sepia(60%) saturate(180%) hue-rotate(160deg) brightness(1.2);
 }
 
 .Design_container .image img:last-child {
     width: 60%;
-    transform: translate(20%);
+    transform: translate(20%,10%);
     filter: grayscale(0%) invert(15%) sepia(60%) saturate(180%) hue-rotate(160deg) brightness(1.2);
 }
 

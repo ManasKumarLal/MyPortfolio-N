@@ -16,6 +16,8 @@
     justify-content: center;
     height: 15%;
     font-size: 50px;
+    color: #45434e;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .contact_container figure {
@@ -35,7 +37,7 @@
     align-items: center;
     justify-content: center;
     gap: 20rem;
-    background-color: #262626;
+    background-color: #2A2833;
     position: relative;
 }
 
@@ -46,6 +48,12 @@
     align-items: flex-end;
     justify-content: center;
     gap: 20px;
+}
+
+.contact_container figure .wrapper .icons {
+    width: 100%;
+    display: flex;
+    padding-left: 10px;
 }
 
 .contact_container figure .wrapper .personal_details .single_detail_logo {

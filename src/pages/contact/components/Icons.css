@@ -1,0 +1,43 @@
+:root {
+  --glow-color: red;
+}
+
+.contact_icons_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* background-color: red; */
+}
+
+.contact_icons_container p {
+  background-color: black;
+  font-size: 30px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 15px var(--glow-color), -3px -3px 15px var(--glow-color);
+  animation: glowAnimation 5s linear 0s infinite;
+  transition: all linear .3s;
+  cursor: pointer;
+}
+
+@keyframes glowAnimation {
+  0%{
+    --glow--color:red;
+  }
+  20% {
+    --glow-color: #14ffe9 !;
+  }
+
+  40% {
+    --glow-color: lightcoral;;
+  }
+
+  60% {
+    --glow-color: #ff00e0;
+  }
+
+  80% {
+    --glow-color: #ffeb3b;
+  }
+}

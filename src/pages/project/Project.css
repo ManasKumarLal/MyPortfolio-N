@@ -5,11 +5,11 @@
 .project_container {
     width: 100%;
     height: 100%;
-    background-color: var(--main-project-bg);
+    background-color: black;
     display: flex;
     /* color: white; */
     user-select: none;
-    padding: 1rem 0 5rem 0;
+    padding: 2rem 0 5rem 0;
     position: relative;
 }
 
