@@ -5,7 +5,7 @@ import Home from './pages/Home/Home'
 import EachProject from './components/eachProject/EachProject'
 import Navbar from './components/Navbar/Navbar'
 // import LocomotiveScroll from 'locomotive-scroll'
-import Footer from './components/footer/footer'
+import Footer from './components/footer/Footer'
 import { useLocation } from 'react-router-dom'
 
 
