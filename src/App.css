@@ -41,3 +41,12 @@ body {
   opacity: 0.5;
   cursor: not-allowed !important;
 }
+
+/* .swiper-pagination-bullet-active {
+  background-color: lightseagreen!important;
+} */
+
+figure{
+  color: #FFBA08;
+  color: #999999;
+}

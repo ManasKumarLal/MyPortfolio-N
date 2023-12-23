@@ -1,22 +1,29 @@
 .about_swiper_container {
     width: 100%;
-    /* background-color: red; */
-    padding: 5rem 28vw;
+    padding: 5rem 20rem 5rem 20rem;
     user-select: none;
-    padding-bottom: 50px;
     position: relative;
 }
 
 .about_swiper_container::before {
     content: "";
     position: absolute;
-    top: -7%;
+    top: -4%;
     left: 10%;
     width: 80%;
     height: 2px;
     background-color: gray;
 }
-.about_swiper_container::after {
+
+.about_swiper_container .wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 6rem 15rem 3rem 15rem;
+    border-radius: 40px;
+    background-color: #2a2833;
+}
+
+/* .about_swiper_container::after {
     content: "";
     position: absolute;
     border-radius: 40px;
@@ -25,7 +32,7 @@
     width: 80%;
     height: 90%;
     background-color: #2a2833;
-}
+} */
 
 .about_swiper_container .swiper {
     width: 100%;
@@ -39,9 +46,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     text-align: center;
-    padding: 50px 0;
+    padding-bottom: 110px;
     /* background-color: green; */
 }
 
@@ -52,8 +59,9 @@
 
 .about_swiper_container .swiperSlide h1 {
     font-size: 30px;
-    font-family: sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 400;
+    color: #ECC9FF;
 }
 
 /* images at left */
@@ -76,7 +84,7 @@
 }
 
 .about_swiper_container img:nth-child(4) {
-    top: 90%;
+    top: 80%;
     left: 30%;
 }
 
@@ -94,13 +102,13 @@
 }
 
 .about_swiper_container img:nth-child(7) {
-    top: 90%;
+    top: 85%;
     right: 20%;
     width: 40px;
 }
 
 .about_swiper_container img:nth-child(8) {
-    top: 70%;
+    top: 60%;
     right: 30%;
 }
 
@@ -129,6 +137,7 @@
     border: 6px solid lightcoral;
     color: transparent;
 }
+
 .about_swiper_container .font_icon:nth-child(11) {
     bottom: 10%;
     left: 3%;
@@ -136,6 +145,7 @@
     border: 6px solid orangered;
     color: transparent;
 }
+
 .about_swiper_container .font_icon:nth-child(12) {
     top: 40%;
     right: 20%;
@@ -143,6 +153,7 @@
     border: 6px solid yellow;
     color: transparent;
 }
+
 .about_swiper_container .font_icon:nth-child(13) {
     bottom: 30%;
     right: 13%;

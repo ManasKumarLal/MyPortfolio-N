@@ -9,7 +9,6 @@ const ProjectContent = () => {
     const containerRef = useRef();
     const contentRef = useRef();
     const [showMoreOption, setShowMoreOption] = useState("");
-    console.log(showMoreOption);
 
     const checkExtensibility = () => {
         const containerHeight = containerRef.current.offsetHeight;
@@ -25,7 +24,7 @@ const ProjectContent = () => {
     }
 
     useEffect(() => {
-        console.log(checkExtensibility());
+        checkExtensibility();
     }, [filteredProjects])
 
     return (

@@ -7,32 +7,50 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
 export default () => {
+
+    const handleTouchStart = () => {
+        document.body.style.cursor = 'grab';
+    };
+
+    const handleTouchEnd = () => {
+        document.body.style.cursor = 'auto';
+    };
+
     return (
         <div className='about_swiper_container'>
-            <Swiper
-                modules={[Pagination]}
-                spaceBetween={50}
-                slidesPerView={1}
-                pagination={{ clickable: true }}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
-                className='swiper'
-            >
-                <SwiperSlide className='swiperSlide'>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, animi? Voluptates veniam dicta suscipit reiciendis recusandae dolor quas esse placeat?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nisi, accusantium sunt obcaecati ex neque labore architecto velit. Dolor neque quasi necessitatibus dolore?
-                    </p>
-                    <h1>- As a Web Designer</h1>
-                </SwiperSlide>
-                <SwiperSlide className='swiperSlide'>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, animi? Voluptates veniam dicta suscipit reiciendis recusandae dolor quas esse placeat?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid iure dicta animi? Amet distinctio repellat quis corrupti neque nulla animi inventore ducimus ut?
-                    </p>
-                    <h1>- As a Logic Builder</h1>
-                </SwiperSlide>
+            <div className='wrapper'>
+                <Swiper
+                    style={{
+                        "--swiper-pagination-color": "lightseagreen",
+                        "--swiper-pagination-bullet-inactive-color": "#999999",
+                        "--swiper-pagination-bullet-inactive-opacity": "1",
+                        "--swiper-pagination-bullet-size": "20px",
+                        "--swiper-pagination-bullet-horizontal-gap": "6px"
+                    }}
+                    modules={[Pagination]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    pagination={{ clickable: true }}
+                    className='swiper'
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                >
+                    <SwiperSlide className='swiperSlide'>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, animi? Voluptates veniam dicta suscipit reiciendis recusandae dolor quas esse placeat?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nisi, accusantium sunt obcaecati ex neque labore architecto velit. Dolor neque quasi
+                        </p>
+                        <h1>- As a Web Designer</h1>
+                    </SwiperSlide>
+                    <SwiperSlide className='swiperSlide'>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, animi? Voluptates veniam dicta suscipit reiciendis recusandae dolor quas esse placeat?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid iure dicta animi? Amet distinctio repellat quis corrupti neque nulla animi inventore ducimus ut?
+                        </p>
+                        <h1>- As a Logic Builder</h1>
+                    </SwiperSlide>
 
-            </Swiper>
+                </Swiper>
+            </div>
 
             <img src="https://cdn-keimj.nitrocdn.com/iaLxREIEPFypcmrLRaUoqNwvvoOlSWhj/assets/images/optimized/rev-f55f44d/shtheme.com/demosd/dizme/wp-content/uploads/2022/05/1-4.jpg" alt="" />
             <img src="https://cdn-keimj.nitrocdn.com/iaLxREIEPFypcmrLRaUoqNwvvoOlSWhj/assets/images/optimized/rev-f55f44d/shtheme.com/demosd/dizme/wp-content/uploads/2022/05/2-1.jpg" alt="" />
