@@ -1,47 +1,50 @@
 .services_container {
     width: 100%;
-    padding: 50px 0;
-    /* background-color: blueviolet; */
 }
 
-.services_container .card {
+.services_container .service_card {
     width: 100%;
     height: 35vh;
-    padding: 0 33%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    /* background-color: green; */
     text-align: center;
 }
 
-.services_container .card h1 {
-    font-size: 24px;
-    color: lightseagreen;
-    transform: translateY(50%);
+.services_container .service_card>div {
+    width: 38rem;
 }
 
-.services_container .card h2 {
+.services_container .service_card h1 {
+    font-size: 24px;
+    color: lightseagreen;
+}
+
+.services_container .service_card h2 {
     color: gray;
     font-weight: 600;
     font-size: 40px;
 }
 
-.services_container .card p {
+.services_container .service_card p {
     font-size: 18px;
 }
 
 .services_container .about_card {
     width: 100%;
-    height: 100vh;
-    padding: 70px 15rem;
-    /* background-color: blue; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.services_container .about_card>div {
+    width: 75%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
-    position: relative;
 }
 
 .services_container .about_card .img_top {
@@ -62,4 +65,45 @@
     z-index: 0;
     filter: grayscale(0%) invert(15%) sepia(60%) saturate(180%) hue-rotate(160deg) brightness(1.2);
     opacity: .7;
+}
+
+
+/* *******************************media query********************************* */
+
+@media (max-width:880px) {
+    .services_container .about_card>div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services_container .service_card>div {
+        width: 80%;
+    }
+
+    .services_container .service_card h1 {
+        font-size: 25px;
+    }
+
+    .services_container .service_card h2 {
+        font-size: 5vw;
+    }
+
+    .services_container .service_card p {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width:500px) {
+    .services_container .about_card>div {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services_container .service_card h1 {
+        font-size: 23px;
+    }
+
+    .services_container .service_card p {
+        font-size: 16px;
+    }
 }

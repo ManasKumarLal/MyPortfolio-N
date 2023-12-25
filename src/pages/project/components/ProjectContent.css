@@ -2,7 +2,6 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    /* background-color: red; */
 }
 
 .showmoreOptions_button {
@@ -10,28 +9,23 @@
     margin-top: 10px;
 }
 
-.projectContent_bottom::after {
+.projectContent_blur::after {
     content: "";
     position: absolute;
     bottom: 0px;
-    width: 97.6%;
-    transform: translateX(1.3%);
-    margin-right: 20px;
+    width: 100%;
     height: 5rem;
-    background: linear-gradient(to top, black, rgba(0, 0, 0, 0.575), transparent);
+    background: linear-gradient(to top, black, transparent);
 }
 
 .projectContent_wrapper {
     width: 100%;
-    height: fit-content;
-    padding: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: min-content;
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     position: relative;
-    /* background-color: green; */
 }
 
 .projectContent_wrapper .not_available {
@@ -44,8 +38,7 @@
 }
 
 .projectContent_wrapper div {
-    /* background-color: burlywood; */
-    height: 260px;
+    height: 100%;
     background-size: cover;
     border-radius: 10px;
     position: relative;
@@ -55,7 +48,7 @@
 
 .projectContent_wrapper img {
     width: 100%;
-    height: 100%;
+    height: 102%;
     object-fit: cover;
     transition: all linear 0.3s;
 }
@@ -78,15 +71,13 @@
 
 .projectContent_wrapper div:hover .overlay {
     opacity: 1;
-    /* transform: scale(1); */
 }
 
-.projectContent_wrapper div:hover {
-    /* transform: scale(0.93); */
+/* .projectContent_wrapper div:hover {
     box-shadow: 2px 2px 10px 5px rgba(255, 255, 255, 0.731);
-}
+} */
 
-.projectContent_wrapper div:hover img{
+.projectContent_wrapper div:hover img {
     scale: 1.2;
 }
 
@@ -97,69 +88,18 @@
 }
 
 
-/************************************************** glow button css *********************************/
-.glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-}
 
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 1;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
 
-.glow-on-hover:active {
-    color: #000
-}
 
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #0A192E;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% {
-        background-position: 0 0;
-    }
-
-    50% {
-        background-position: 400% 0;
-    }
-
-    100% {
-        background-position: 0 0;
+/* ***************************************media query*************************************************** */
+@media (max-width:1470px) {
+    .projectContent_wrapper {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/********************************************* glow button css end ******************************************/
+@media (max-width:880px) {
+    .projectContent_wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

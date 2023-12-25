@@ -5,7 +5,6 @@ import Form from './components/Form';
 import SingleDetail from './components/SingleDetail';
 import Icons from './components/Icons';
 
-
 const Contact = () => {
 
     return (
@@ -13,7 +12,7 @@ const Contact = () => {
             <div id='contact' className="contact_container" >
                 <div className="wrapper">
 
-                    <div className="personal_details w-[30%]">
+                    <div className="personal_details">
                         <h1>Contact me!!</h1>
                         <SingleDetail
                             detail="7261876702"
@@ -34,7 +33,7 @@ const Contact = () => {
 
                     <div className='line'></div>
 
-                    <div className='w-[30%]'>
+                    <div className='form'>
                         <Form />
                     </div>
 

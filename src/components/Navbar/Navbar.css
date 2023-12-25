@@ -1,5 +1,4 @@
 .nav_container {
-    /* background-color: rgba(0, 0, 0, 0.539); */
     height: 5rem;
     width: 100%;
     display: flex;
@@ -10,11 +9,11 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    /* color: white; */
-    z-index: 10;
+    z-index: 100;
     font-size: 17px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     transition: all linear 0.5s;
+    user-select: none;
 }
 
 .nav_container .brand {
@@ -22,11 +21,136 @@
     height: auto;
     border-radius: 5px;
     overflow: hidden;
+    transition: all linear .4s;
 }
 
 .nav_container .routes {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
+    transition: all linear 0.3s;
+}
+
+.nav_dustbin {
+    position: fixed;
+    width: 100px;
+    top: 16rem;
+    right: 9%;
+    scale: 0;
+    z-index: 99;
+}
+
+.nav_dustbin_zoom {
+    animation-name: dustbin;
+    animation-duration: .6s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+.nav_blast {
+    position: fixed;
+    width: 160px;
+    top: 12.5rem;
+    right: 4%;
+    scale: 0;
+    z-index: 100;
+}
+
+.nav_blast_zoom {
+    animation-name: dustbin;
+    animation-duration: .6s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes dustbin {
+    0% {
+        scale: 0;
+    }
+
+    20% {
+        scale: 1;
+    }
+
+    70% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 0;
+    }
+
+}
+
+/* *******************************mobile menu******************************************* */
+.nav_container .mobileMenu {
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+/* ********************************media query******************************************** */
+@media (max-width:1190px) {
+    .nav_container {
+        padding: 0 4rem;
+    }
+}
+
+@media (max-width:880px) {
+    .nav_container .routes {
+        width: 70vw;
+        position: absolute;
+        top: 10rem;
+        left: 50%;
+        transform: translate(-50%);
+        flex-direction: column;
+        gap: 0;
+        border-radius: 30px;
+        overflow: hidden;
+        background-color: #2A2833;
+    }
+
+    .nav_container .routes_none {
+        scale: 0;
+    }
+
+    .nav_container .routes .route {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        transition: all linear .3s;
+    }
+
+    .nav_container .routes .route:hover {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.402);
+    }
+
+    .nav_container .contact {
+        display: none;
+    }
+
+    .nav_container .brand {
+        width: 55px;
+    }
+
+    .nav_container .mobileMenu {
+        display: block;
+    }
+}
+
+@media (max-width:650px) {
+    .nav_container {
+        padding: 0 2rem;
+    }
+
+    .nav_blast {
+        right: 0;
+    }
+
+    .nav_dustbin {
+        right: 5%;
+    }
 }

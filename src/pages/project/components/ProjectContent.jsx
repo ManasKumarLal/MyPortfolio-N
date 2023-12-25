@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './ProjectContent.css'
 import { useNavigate } from 'react-router-dom'
 import { useProjectContext } from '../context/Provider';
+import GlowButton from './GlowButton';
 
 const ProjectContent = () => {
     const navigate = useNavigate();
@@ -13,11 +14,9 @@ const ProjectContent = () => {
     const checkExtensibility = () => {
         const containerHeight = containerRef.current.offsetHeight;
         const contentHeight = contentRef.current.offsetHeight;
+        console.log(containerHeight, contentHeight)
         if (contentHeight > containerHeight) {
             setShowMoreOption("showmore");
-            return;
-        } else if (contentHeight === containerHeight) {
-            setShowMoreOption("showless")
             return;
         }
         else setShowMoreOption("");
@@ -29,7 +28,7 @@ const ProjectContent = () => {
 
     return (
         <>
-            <section className={`projectContent_container   ${showMoreOption === "showmore" && "projectContent_bottom"} ${showMoreOption === "showless" ? "h-full" : "h-[77vh]"}`} ref={containerRef}>
+            <section className={`projectContent_container   ${showMoreOption === "showmore" && "projectContent_blur"} ${showMoreOption === "showless" ? "h-full" : "h-[77vh]"}`} ref={containerRef}>
                 <div className="projectContent_wrapper" ref={contentRef}>
                     {
                         filteredProjects.length <= 0
@@ -38,10 +37,12 @@ const ProjectContent = () => {
                             :
                             filteredProjects?.map((item, index) => {
                                 return <div key={index}>
-                                    <img src={item.imgSrc} alt="" />
+                                    <img src={item.imgSrc} alt="" onLoad={checkExtensibility} />
                                     <div className="overlay">
                                         <span>{item.title}</span>
-                                        <button onClick={() => navigate(`/${item.id}`)} className="glow-on-hover" type="button">Explore me!</button>
+                                        <p onClick={() => navigate(item.id)}>
+                                            <GlowButton />
+                                        </p>
                                     </div>
                                 </div>
                             })
