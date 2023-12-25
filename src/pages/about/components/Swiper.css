@@ -12,7 +12,7 @@
 .about_swiper_container::before {
     content: "";
     position: absolute;
-    top: -4%;
+    top: 2%;
     left: 10%;
     width: 80%;
     height: 2px;
@@ -24,7 +24,7 @@
     height: 100%;
     padding: 5rem 15rem;
     border-radius: 40px;
-    background-color: #2a2833;
+    background-color: #2a2833ab;
 }
 
 .about_swiper_container .swiper {
@@ -162,30 +162,40 @@
     .about_swiper_container .wrapper {
         padding: 5rem 8rem;
         width: 80%;
-    } 
-    .about_swiper_container{
+    }
+
+    .about_swiper_container {
         height: 70vh;
     }
 }
+
 @media (max-width:1070px) {
+    .about_swiper_container{
+        padding: 3rem 0 1rem 0;
+    }
     .about_swiper_container .wrapper {
         padding: 3rem 2rem 5rem 2rem;
         width: 90%;
-    } 
-    .about_swiper_container .swiperSlide{
+    }
+
+    .about_swiper_container .swiperSlide {
         padding-bottom: 2rem;
         gap: 10px;
     }
-    .about_swiper_container .swiperSlide h1{
+
+    .about_swiper_container .swiperSlide h1 {
         font-size: 20px;
     }
-    .about_swiper_container{
+
+    .about_swiper_container {
         height: 60vh;
     }
-    .about_swiper_container img{
+
+    .about_swiper_container img {
         display: none;
     }
-    .about_swiper_container .font_icon{
+
+    .about_swiper_container .font_icon {
         display: none;
     }
 }

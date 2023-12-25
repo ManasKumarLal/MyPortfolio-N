@@ -20,7 +20,7 @@ const Navbar = () => {
         navbar.style.top = "-50vh"
       } else {
         navbar.style.top = "0px"
-        navbar.style.backgroundColor = "rgba(0, 0, 0, 0.539)"
+        navbar.style.backgroundColor = "rgba(0, 0, 0, 0.2)"
       }
       setPrevScrollPos(currentScrollPos);
     }

@@ -133,8 +133,11 @@
 }
 
 @media (max-width:880px) {
+    .Design_container{
+        padding-bottom: 3rem;
+    }
     .Design_container .wrapper {
-        width: 80%;
+        width: 75%;
     }
 
     .Design_container .image img {
@@ -143,6 +146,10 @@
 }
 
 @media (max-width:570px) {
+    .Design_container{
+        padding-top: 0;
+        
+    }
     .Design_container .image img {
         height: auto;
     }
