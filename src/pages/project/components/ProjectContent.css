@@ -62,12 +62,18 @@
     left: 0px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     align-items: center;
     justify-content: center;
     transition: all linear 0.3s;
     opacity: 0;
 }
+.projectContent_wrapper div .overlay span {
+    text-align: center;
+    font-size: 20px;
+    width: 90%;
+}
+
 
 .projectContent_wrapper div:hover .overlay {
     opacity: 1;
@@ -81,11 +87,6 @@
     scale: 1.2;
 }
 
-.projectContent_wrapper div .overlay span {
-    text-align: center;
-    font-size: 30px;
-    transform: translateY(-30%);
-}
 
 
 

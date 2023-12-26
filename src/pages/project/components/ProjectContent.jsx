@@ -14,7 +14,7 @@ const ProjectContent = () => {
     const checkExtensibility = () => {
         const containerHeight = containerRef.current.offsetHeight;
         const contentHeight = contentRef.current.offsetHeight;
-        console.log(containerHeight, contentHeight)
+        // console.log(containerHeight, contentHeight)
         if (contentHeight > containerHeight) {
             setShowMoreOption("showmore");
             return;
