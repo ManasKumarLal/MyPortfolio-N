@@ -49,8 +49,8 @@ const ProjectContent = () => {
                     }
                 </div>
             </section>
-            {showMoreOption === "showmore" && <button onClick={() => setShowMoreOption("showless")} className='showmoreOptions_button'>show more</button>}
-            {showMoreOption === "showless" && <button onClick={() => setShowMoreOption("showmore")} className='showmoreOptions_button'>show less</button>}
+            {showMoreOption === "showmore" && <button onClick={() => setShowMoreOption("showless")} className='showmoreOptions_button'>Show more</button>}
+            {showMoreOption === "showless" && <button onClick={() => setShowMoreOption("showmore")} className='showmoreOptions_button'>Show less</button>}
             {showMoreOption === "" && <button></button>}
         </>
     )

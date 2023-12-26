@@ -36,14 +36,14 @@
 .nav_dustbin {
     position: fixed;
     width: 100px;
-    top: 16rem;
-    right: 9%;
+    top: 13rem;
+    right: 5%;
     scale: 0;
     z-index: 99;
 }
 
 .nav_dustbin_zoom {
-    animation-name: dustbin;
+    animation-name: NavAnime;
     animation-duration: .6s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
@@ -52,20 +52,20 @@
 .nav_blast {
     position: fixed;
     width: 160px;
-    top: 12.5rem;
-    right: 4%;
+    top: 9rem;
+    right: 2%;
     scale: 0;
     z-index: 100;
 }
 
 .nav_blast_zoom {
-    animation-name: dustbin;
+    animation-name: NavAnime;
     animation-duration: .6s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
 }
 
-@keyframes dustbin {
+@keyframes NavAnime {
     0% {
         scale: 0;
     }
@@ -100,9 +100,9 @@
 
 @media (max-width:880px) {
     .nav_container .routes {
-        width: 70vw;
+        width: 75vw;
         position: absolute;
-        top: 10rem;
+        top: 6rem;
         left: 50%;
         transform: translate(-50%);
         flex-direction: column;
@@ -146,11 +146,15 @@
         padding: 0 2rem;
     }
 
+    .nav_container .routes {
+        width: 90vw;
+    }
+
     .nav_blast {
-        right: 0;
+        display: none;
     }
 
     .nav_dustbin {
-        right: 5%;
+        right: -4%;
     }
 }

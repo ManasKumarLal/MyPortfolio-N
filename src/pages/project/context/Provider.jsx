@@ -10,11 +10,13 @@ export const useProjectContext = () => {
 export const MyProvider = ({ children }) => {
     const [projects, setProjects] = useState(project);
     const [filteredProjects, setFilteredProjects] = useState(project);
+    const projectCount = filteredProjects.length;
     const properties = {
         projects,
         setProjects,
         filteredProjects,
         setFilteredProjects,
+        projectCount,
     }
     return (
         <context.Provider value={properties}>
