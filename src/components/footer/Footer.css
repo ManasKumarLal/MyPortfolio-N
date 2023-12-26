@@ -315,6 +315,10 @@ footer .pseudoLine::after {
         width: 100%;
     }
 
+    footer .footer_links .about .logo {
+        width: 30%;
+    }
+
     footer .footer_links .wrapper1 .projects {
         width: 100%;
     }

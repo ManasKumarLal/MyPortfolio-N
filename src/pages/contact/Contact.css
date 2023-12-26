@@ -46,6 +46,7 @@
     width: 100%;
     display: flex;
     padding-left: 10px;
+    margin-top: 2rem;
 }
 
 .contact_container .wrapper .personal_details .single_detail_logo {
