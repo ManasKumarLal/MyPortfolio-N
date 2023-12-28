@@ -1,14 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Contact.css'
 import { MdCall, MdEmail, MdLocationPin } from "react-icons/md";
 import Form from './components/Form';
 import SingleDetail from './components/SingleDetail';
 import Icons from './components/Icons';
+import SubmissionPopup from './components/SubmissionPopup';
 
 const Contact = () => {
+    const [submissionPopup, setSubmissionPopup] = useState(false);
+    const [submitterDetails, setSubmitterDetails] = useState("")
+
+    const submitResponse = (response) => {
+        setSubmitterDetails(response);
+    }
 
     return (
         <>
+            <button className='text-red z-[400] fixed top-24' onClick={() => { setSubmissionPopup(true) }}>test</button>
+            <SubmissionPopup
+
+                submitterDetails={submitterDetails}
+                submissionPopup={submissionPopup}
+                setSubmissionPopup={setSubmissionPopup}
+            />
             <div id='contact' className="contact_container" >
                 <div className="wrapper">
 
@@ -34,7 +48,7 @@ const Contact = () => {
                     <div className='line'></div>
 
                     <div className='form'>
-                        <Form />
+                        <Form submitResponse={submitResponse} setSubmissionPopup={setSubmissionPopup} />
                     </div>
 
                 </div>

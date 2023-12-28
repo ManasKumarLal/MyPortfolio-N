@@ -6,6 +6,7 @@ import EachProject from './components/eachProject/EachProject'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/footer/Footer'
 import { useLocation } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify';
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
 
   return (
     <>
+      <ToastContainer theme="dark" className="select-none" />
       {location.pathname === "/" && <Navbar />}
       <Routes>
         <Route path='/' element={<Home />} />

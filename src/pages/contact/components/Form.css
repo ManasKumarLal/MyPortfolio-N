@@ -7,12 +7,12 @@
     justify-content: center;
     gap: 20px;
 }
-.recruiters-form span{
+
+.recruiters-form span {
     width: 100%;
 }
 
 .recruiters-form input {
-    background-color: black;
     padding: 20px;
     height: 60px;
     width: 100%;
@@ -20,14 +20,13 @@
 }
 
 .recruiters-form textarea {
-    background-color: black;
     padding: 20px;
     width: 100%;
     border-radius: 10px;
 }
 
 .recruiters-form .btn-contact {
-    background-color:#424242;
+    background-color: #424242;
     width: 100%;
     padding: 15px 0;
     font-size: 18px;
