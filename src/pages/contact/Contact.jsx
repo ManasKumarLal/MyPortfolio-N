@@ -16,7 +16,6 @@ const Contact = () => {
 
     return (
         <>
-            <button className='text-red z-[400] fixed top-24' onClick={() => { setSubmissionPopup(true) }}>test</button>
             <SubmissionPopup
 
                 submitterDetails={submitterDetails}

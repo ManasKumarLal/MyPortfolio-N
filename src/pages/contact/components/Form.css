@@ -26,8 +26,25 @@
 }
 
 .recruiters-form .btn-contact {
-    background-color: #424242;
+    /* background-color: #424242; */
+    border: 2px solid lightseagreen;
     width: 100%;
     padding: 15px 0;
     font-size: 18px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.recruiters-form .btn-contact:active,
+.btn-contact:hover {
+    background-color: lightseagreen;
+}
+
+/* ******************media query**************** */
+@media (max-width:500px){
+    .recruiters-form input{
+        background-color: #262626;
+    }
+    .recruiters-form textarea{
+        background-color: #262626;
+    }
 }

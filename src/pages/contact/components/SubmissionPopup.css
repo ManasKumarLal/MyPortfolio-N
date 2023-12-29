@@ -11,6 +11,11 @@
     transition: all linear .3s;
 }
 
+.submissionPopup_container .wrapper .went_wrong{
+    font-size: 30px;
+    color: orangered;
+}
+
 .hide {
     scale: 0;
 }

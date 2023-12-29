@@ -14,35 +14,47 @@ const SubmissionPopup = ({ submitterDetails, submissionPopup, setSubmissionPopup
             />
 
             <div className={`submissionPopup_container ${submissionPopup ? "show" : "hide"}`}>
-                <div className="wrapper">
-                    <h1>Submission Successfull !</h1>
-                    <div className='details'>
-                        <div>
-                            Your Name:
-                            <h4>{submitterDetails.name}</h4>
-                        </div>
-                        <div>
-                            Your Email:
-                            <h4>{submitterDetails.email}</h4>
+                {
+                    submitterDetails ?
+                        <div className="wrapper">
+                            <h1>Submission Successfull !</h1>
+                            <div className='details'>
+                                <div>
+                                    Your Name:
+                                    <h4>{submitterDetails?.name}</h4>
+                                </div>
+                                <div>
+                                    Your Email:
+                                    <h4>{submitterDetails?.email}</h4>
 
+                                </div>
+                                <div>
+                                    Your Phone Number:
+                                    <h4>{submitterDetails?.phoneNumber}</h4>
+                                </div>
+                                <div>
+                                    Your Description:
+                                    <h4>{submitterDetails?.description}</h4>
+                                </div>
+                            </div>
+                            <div className="is_edit">
+                                <h2>Do you want to edit your details ?</h2>
+                                <div className="buttons">
+                                    <button onClick={() => { setSubmissionPopup(false); setUpdatePopup(true) }} className='bg-green-500'>Yes</button>
+                                    <button onClick={() => setSubmissionPopup(false)} className='bg-red-500'>No</button>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            Your Phone Number:
-                            <h4>{submitterDetails.phoneNumber}</h4>
+                        :
+                        <div className="wrapper">
+                            <h1 className='went_wrong'>
+                                Oops Something went wrong
+                                <br />
+                                Please try again later !
+                            </h1>
                         </div>
-                        <div>
-                            Your Description:
-                            <h4>{submitterDetails.description}</h4>
-                        </div>
-                    </div>
-                    <div className="is_edit">
-                        <h2>Do you want to edit your details ?</h2>
-                        <div className="buttons">
-                            <button onClick={() => { setSubmissionPopup(false); setUpdatePopup(true) }} className='bg-green-500'>Yes</button>
-                            <button onClick={() => setSubmissionPopup(false)} className='bg-red-500'>No</button>
-                        </div>
-                    </div>
-                </div>
+                }
+
             </div>
         </>
     )

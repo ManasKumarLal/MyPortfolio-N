@@ -17,11 +17,9 @@ const Navbar = () => {
       const currentScrollPos = window.pageYOffset;
       const navbar = navbarRef.current;
       if (currentScrollPos > prevScrollPos) {
-        navbar.style.top = "30vh"
-        navbar.style.scale = 0
+        navbar.style.left = "-100vw"
       } else {
-        navbar.style.top = "0px"
-        navbar.style.scale = 1
+        navbar.style.left = "0px"
         navbar.style.backgroundColor = "rgba(0, 0, 0, 0.2)"
       }
       setPrevScrollPos(currentScrollPos);

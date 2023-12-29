@@ -112,6 +112,8 @@
     .contact_container .wrapper {
         padding: 2rem 0;
         width: 95%;
+        border-radius: 0;
+        background-color: transparent;
     }
 
     .contact_container .wrapper .personal_details {

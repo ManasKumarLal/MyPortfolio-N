@@ -6,7 +6,7 @@ const UpdatePopup = ({ updatePopup, setUpdatePopup, submitterDetails }) => {
     return (
         <div className={`updatePopup_container ${updatePopup ? "show" : "hide"}`}>
             <div className="wrapper">
-                <Form formFills={submitterDetails} inputBg="#2a2833c0" />
+                <Form inputBackground="bg-[#343541]" formFills={submitterDetails} updatePopup={updatePopup} setUpdatePopup={setUpdatePopup}/>
             </div>
         </div>
     )

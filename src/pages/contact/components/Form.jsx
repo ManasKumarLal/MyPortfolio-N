@@ -1,13 +1,14 @@
 import './Form.css'
 import React, { useEffect, useState } from 'react'
-import { createRecruiterDetails } from '../../../aapwrite/Database'
+import { createRecruiterDetails, updateRecruiterDetails } from '../../../aapwrite/Database'
 import { validateForm } from '../Validation';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Form = ({ submitResponse, setSubmissionPopup, inputBg = "black", formFills }) => {
+const Form = ({ inputBackground = "bg-black", submitResponse, setSubmissionPopup, updatePopup, setUpdatePopup, formFills }) => {
 
-    const notify = () => toast.success(<div><b>Thank you!</b><br />Your information has been recorded!</div>);
+    const notifySubmissionSuccessfull = () => toast.success(<div><b>Thank you!</b><br />Your information has been <b>RECORDED!</b></div>);
+    const notifyUpdateSuccessfull = () => toast.success(<div><b>Thank you!</b><br />Your information has been <b>UPDATED!</b></div>);
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [recruiterDetails, SetRecruiterDetails] = useState({
@@ -55,7 +56,7 @@ const Form = ({ submitResponse, setSubmissionPopup, inputBg = "black", formFills
         SetRecruiterDetails(formFills);
     }, [formFills])
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e, type) => {
         e.preventDefault();
         emptyOutError();
         if (!validateForm(recruiterDetails, handleFormError)) {
@@ -69,9 +70,18 @@ const Form = ({ submitResponse, setSubmissionPopup, inputBg = "black", formFills
                 description: removeExtraSpaces(recruiterDetails.description),
             }
             SetRecruiterDetails(cleanedRecruiterDetails);
-            const response = await createRecruiterDetails(cleanedRecruiterDetails);
-            submitResponse(response);
-            console.log(response);
+            if (type === "submit") {
+                const response = await createRecruiterDetails(cleanedRecruiterDetails);
+                console.log(response);
+                submitResponse(response);
+                notifySubmissionSuccessfull();
+                setSubmissionPopup(true);
+            } else if (type === "update") {
+                const response = await updateRecruiterDetails(formFills?.$id, cleanedRecruiterDetails);
+                console.log(response);
+                notifyUpdateSuccessfull();
+                setUpdatePopup(false);
+            }
             setIsSubmitting(false);
             SetRecruiterDetails({
                 name: "",
@@ -79,8 +89,7 @@ const Form = ({ submitResponse, setSubmissionPopup, inputBg = "black", formFills
                 phoneNumber: "",
                 description: "",
             })
-            notify();
-            setSubmissionPopup(true);
+
         }
     }
 
@@ -92,7 +101,7 @@ const Form = ({ submitResponse, setSubmissionPopup, inputBg = "black", formFills
                 <span>
                     {error.name && <p className="err">{error.name}</p>}
                     <input
-                        className={`bg-[${inputBg}]`}
+                        className={`${inputBackground}`}
                         type="text"
                         onClick={emptyOutError}
                         value={recruiterDetails.name}
@@ -103,7 +112,7 @@ const Form = ({ submitResponse, setSubmissionPopup, inputBg = "black", formFills
                 <span>
                     {error.email && <p className="err">{error.email}</p>}
                     <input
-                        className={`bg-[${inputBg}]`}
+                        className={`${inputBackground}`}
                         type="email"
                         onClick={emptyOutError}
                         value={recruiterDetails.email}
@@ -114,7 +123,7 @@ const Form = ({ submitResponse, setSubmissionPopup, inputBg = "black", formFills
                 <span>
                     {error.phoneNumber && <p className="err">{error.phoneNumber}</p>}
                     <input
-                        className={`bg-[${inputBg}]`}
+                        className={`${inputBackground}`}
                         type="text"
                         onClick={emptyOutError}
                         value={recruiterDetails.phoneNumber}
@@ -125,7 +134,7 @@ const Form = ({ submitResponse, setSubmissionPopup, inputBg = "black", formFills
                 <span>
                     {error.description && <p className="err">{error.description}</p>}
                     <textarea
-                        className={`bg-[${inputBg}]`}
+                        className={`${inputBackground}`}
                         name=""
                         id=""
                         value={recruiterDetails.description}
@@ -135,15 +144,29 @@ const Form = ({ submitResponse, setSubmissionPopup, inputBg = "black", formFills
                         placeholder='hiring details.....'
                     ></textarea>
                 </span>
-                <button
-                    type='submit'
-                    onClick={handleSubmit}
-                    className={`btn btn-contact ${isSubmitting ? 'btn-disabled' : ''}`}
-                    disabled={isSubmitting}
-                >
-                    Submit
-                </button>
-            </form>
+
+                {
+                    updatePopup
+                        ?
+                        <button
+                            type='submit'
+                            onClick={(e) => handleSubmit(e, "update")}
+                            className={`btn btn-contact ${isSubmitting ? 'btn-disabled' : ''}`}
+                            disabled={isSubmitting}
+                        >
+                            Update
+                        </button>
+                        :
+                        <button
+                            type='submit'
+                            onClick={(e) => handleSubmit(e, "submit")}
+                            className={`btn btn-contact ${isSubmitting ? 'btn-disabled' : ''}`}
+                            disabled={isSubmitting}
+                        >
+                            Submit
+                        </button>
+                }
+            </form >
         </>
     )
 }

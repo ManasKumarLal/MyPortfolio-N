@@ -3,16 +3,34 @@ import { client } from './Aapwrite'
 
 const databases = new Databases(client);
 
+const DatabaseId = import.meta.env.VITE_DATABASE_ID;
+const CollectionId = import.meta.env.VITE_COLLECTION_ID;
+console.log(DatabaseId, CollectionId);
+
 export const createRecruiterDetails = async (data) => {
     try {
         const response = await databases.createDocument(
-            '6581f6625e6f02c40277',
-            '6581f66c080d93b2f676',
+            DatabaseId,
+            CollectionId,
             ID.unique(),
             data
         );
         return response;
     } catch (error) {
         console.error("Database :: createRecruiterDetails :: error : " + error);
+    }
+}
+
+export const updateRecruiterDetails = async (document_id, data) => {
+    try {
+        const response = await databases.updateDocument(
+            DatabaseId,
+            CollectionId,
+            document_id,
+            data
+        )
+        return response;
+    } catch (error) {
+        console.error("Database :: updateRecruiterDetails :: error : " + error);
     }
 }

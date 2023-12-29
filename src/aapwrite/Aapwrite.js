@@ -2,6 +2,11 @@ import { Client, Account } from 'appwrite';
 
 export const client = new Client();
 
+const AppwriteUrl = import.meta.env.VITE_APPWRITE_URL;
+const ProjectId = import.meta.env.VITE_PROJECT_ID;
+console.log(AppwriteUrl, ProjectId)
+
+
 client
-    .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject('6581f4c25a872baee93f')
+    .setEndpoint(AppwriteUrl)
+    .setProject(ProjectId)

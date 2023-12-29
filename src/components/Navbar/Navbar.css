@@ -12,7 +12,7 @@
     z-index: 1000 !important;
     font-size: 17px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, scale 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out, background-color 0.3s ease-in-out;
     user-select: none;
 }
 
