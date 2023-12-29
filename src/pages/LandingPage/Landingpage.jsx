@@ -8,9 +8,15 @@ import IMG1 from './04.jpg'
 
 const Home = () => {
     const skills = [
-        ' Specializing in the MERN stack, I excel in crafting robust and scalable solutions that seamlessly marry form and function.',
+        ' Full Stack Developer',
         100,
-        ' My commitment to staying at the forefront of industry trends, coupled with a keen eye for design and user experience, ensures that each project I undertake is a testament to quality and innovation.',
+        ' Web Designer',
+        100,
+        ' Logic Builder',
+        100,
+        ' Frontend Developer',
+        100,
+        ' Backend Developer',
         100,
     ]
     return (
@@ -26,7 +32,7 @@ const Home = () => {
                                 I am
                                 <TypeAnimation
                                     sequence={[
-                                        ' manas kumar lal',
+                                        ' Manas kumar lal',
                                         100,
                                     ]}
                                     wrapper="span"
@@ -36,20 +42,28 @@ const Home = () => {
                                 />
                             </h2>
                             <p>
-                                As a seasoned professional web developer, I bring a wealth of expertise in the dynamic world of web technologies.
-                                <TypeAnimation
-                                    sequence={skills}
-                                    wrapper="span"
-                                    speed={70}
-                                    deletionSpeed={95}
-                                    repeat={Infinity}
-                                />
+                                As a seasoned professional web developer,
+                                <br />
+                                I bring a wealth of expertise in the dynamic world of web technologies.
+                                <br />
+                                <span className='text-2xl'>
+                                    I am a
+                                    <b className='text-[#20B2ABC4]'>
+                                        <TypeAnimation
+                                            sequence={skills}
+                                            wrapper="span"
+                                            speed={30}
+                                            deletionSpeed={30}
+                                            repeat={Infinity}
+                                        />
+                                    </b>
+                                </span>
                             </p>
 
                             <div className='buttons'>
-                                <Button route="about" text="More About Me" w="160px"/>
-                                <Button route="contact" text="Hire Me" w="160px"/>
-                                <Button route="project" text="See My Projects" w="160px"/>
+                                <Button route="about" text="More About Me" w="160px" />
+                                <Button route="contact" text="Hire Me" w="160px" />
+                                <Button route="project" text="See My Projects" w="160px" />
                             </div>
 
                             <div className="icons">

@@ -63,7 +63,7 @@
 }
 
 .home_container .content .text h2 {
-    font-size: 3rem;
+    font-size: 40px;
     font-family: gilroy;
 }
 
@@ -123,15 +123,16 @@
         width: 60%;
         justify-content: flex-start;
     }
-
-    .home_container .content .text p {
-        display: none;
-    }
 }
 
 @media (max-width:880px) {
     .home_container {
+        padding-top: 6rem;
         padding-bottom: 5rem;
+    }
+
+    .home_container .content {
+        gap: 2.5rem;
     }
 
     .home_container::after {
@@ -140,10 +141,6 @@
 
     .home_container video {
         display: none;
-    }
-
-    .home_container .content .text h2 {
-        font-size: 2rem;
     }
 
     .home_container .content .image {
@@ -162,11 +159,19 @@
         font-size: 3rem;
     }
 
+    .home_container .content .text h2 {
+        font-size: 20px;
+    }
+
+    .home_container .content .text p {
+        font-size: 15px;
+    }
+
     .home_container .content .text .buttons {
         display: none;
     }
 
     .home_container .content .text .icons {
-        margin-top: 3rem;
+        margin-top: 3.5rem;
     }
 }

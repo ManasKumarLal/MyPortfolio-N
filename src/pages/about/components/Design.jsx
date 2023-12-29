@@ -19,7 +19,7 @@ const Design = () => {
                     <h3>I'm a Designer</h3>
                     <h1>I Can Design Anything You Want</h1>
                     <p>Hello there! I'm a <span>web designer</span>, and I'm very passionate and dedicated to my work. With 2 years experience as a professional web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step of the design process, from discussion and collaboration.</p>
-                    <Button route='contact' text='Hire Me' />
+                    <Button route="contact" text="Hire Me" w="160px" />
                 </div>
             </div>
 
