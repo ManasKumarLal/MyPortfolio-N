@@ -26,25 +26,39 @@
 }
 
 .recruiters-form .btn-contact {
-    /* background-color: #424242; */
     border: 2px solid lightseagreen;
     width: 100%;
-    padding: 15px 0;
+    padding: 10px 0;
     font-size: 18px;
-    transition: background-color 0.2s ease-in-out;
+    position: relative;
 }
 
-.recruiters-form .btn-contact:active,
-.btn-contact:hover {
-    background-color: lightseagreen;
+.recruiters-form .btn-contact::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(32, 178, 171, 0.342);
+}
+
+.recruiters-form .btn-contact:hover::after {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.recruiters-form .btn-contact:active::after {
+    background-color: transparent;
 }
 
 /* ******************media query**************** */
-@media (max-width:500px){
-    .recruiters-form input{
+@media (max-width:500px) {
+    .recruiters-form input {
         background-color: #262626;
     }
-    .recruiters-form textarea{
+
+    .recruiters-form textarea {
         background-color: #262626;
     }
 }

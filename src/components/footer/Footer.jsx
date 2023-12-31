@@ -21,7 +21,7 @@ const Footer = () => {
                         <h2 className='location'>
                             <MdLocationPin className='icon' />
                             <div>
-                                <span>Find us</span>
+                                <span>Find me</span>
                                 <p>1010 Avenue, sw 54321, chandigarh</p>
                             </div>
                         </h2>
@@ -37,7 +37,7 @@ const Footer = () => {
                         <h2 className='mail'>
                             <MdEmail className='icon' />
                             <div>
-                                <span>Mail us</span>
+                                <span>Mail me</span>
                                 <p>skillszone100@gmail.com</p>
                             </div>
                         </h2>
@@ -46,6 +46,7 @@ const Footer = () => {
 
                     {/* link section */}
                     <div className='footer_links'>
+
                         <div className="wrapper1">
                             {/* logo */}
                             <h2 className='about'>
@@ -78,6 +79,7 @@ const Footer = () => {
                                 </div>
                             </h2>
                         </div>
+
                         <div className="wrapper2">
                             {/* quick link */}
                             <h2 className='links'>
@@ -100,6 +102,7 @@ const Footer = () => {
                                 </div>
                             </h2>
                         </div>
+
                     </div>
 
                 </div>

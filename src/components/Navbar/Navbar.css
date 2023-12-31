@@ -33,6 +33,48 @@
     transition: all linear 0.3s;
 }
 
+.nav_container .routes .route {
+    position: relative;
+    padding: 4px 23px;
+    transition: all linear .3s;
+}
+
+.nav_container .routes .route::before {
+    content: "";
+    height: 1.5px;
+    width: 0%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: lightseagreen;
+    transition: width .3s linear;
+    border-radius: 5px;
+}
+
+.nav_container .routes .route::after {
+    content: "";
+    height: 1px;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: lightseagreen;
+    transition: width .3s linear;
+    border-radius: 5px;
+}
+
+.nav_container .routes .route:hover {
+    background-color: rgba(32, 178, 171, 0.461);
+}
+
+.nav_container .routes .route:hover::before {
+    width: 100%;
+}
+
+.nav_container .routes .route:hover::after {
+    width: 100%;
+}
+
 .nav_dustbin {
     position: fixed;
     width: 100px;
@@ -110,7 +152,6 @@
         border-radius: 30px;
         overflow: hidden;
         background: linear-gradient(to right, black, rgba(0, 0, 0, 0.521), black);
-        /* background-color: #2a28339b; */
         box-shadow: 0 0 10px white;
     }
 
@@ -127,8 +168,19 @@
 
     .nav_container .routes .route:hover {
         width: 100%;
-        background: rgba(255, 255, 255, 0.402);
+        /* background: rgba(255, 255, 255, 0.402); */
+        background-color: rgba(32, 178, 171, 0.461);
     }
+
+    .nav_container .routes .route::before {
+        display: none;
+    }
+
+    .nav_container .routes .route::after {
+        display: none;
+    }
+
+
 
     .nav_container .contact {
         display: none;

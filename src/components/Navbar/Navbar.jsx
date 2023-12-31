@@ -47,7 +47,7 @@ const Navbar = () => {
                 to={item.path}
                 smooth={true}
                 duration={0}>
-                {item.name}
+                <span className='hello'>{item.name}</span>
               </ScrollLink>
 
             })
