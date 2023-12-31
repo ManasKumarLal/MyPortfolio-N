@@ -22,6 +22,7 @@ const Contact = () => {
                 submissionPopup={submissionPopup}
                 setSubmissionPopup={setSubmissionPopup}
             />
+            
             <div id='contact' className="contact_container" >
                 <div className="wrapper">
 

@@ -14,13 +14,13 @@ const Category = () => {
       setFilteredProjects(filteredProjects);
       return;
     }
-    console.log(projects);
     setFilteredProjects(projects);
   }
   return (
     <>
       <div className='project_category_pc'>
         <button onClick={() => filterProjects("All Category")} className={activeAllCategories ? 'active' : ''}>All Category</button>
+        <button onClick={() => filterProjects("PRODUCTION")}>PRODUCTION</button>
         <button onClick={() => filterProjects("CSS")}>CSS</button>
         <button onClick={() => filterProjects("Bootstrap")}>Bootstrap</button>
         <button onClick={() => filterProjects("Javascript")}>Javascript</button>

@@ -55,7 +55,7 @@ const EachProject = () => {
                     />
                 </Link>
 
-                <h1>{id}. Another ones, I've build</h1>
+                <h1>Another ones, I've build</h1>
                 <div className="content">
 
                     <div className="image">
@@ -68,7 +68,7 @@ const EachProject = () => {
 
                     <div className="text">
 
-                        <p className='text-[#57D3BC]'> {projectData.title}</p>
+                        <p className='text-[#57D3BC]'># {projectData.title}</p>
 
                         <p>
                             <span className='text-[#57D3BC]'>{projectData.category} </span>
@@ -86,9 +86,9 @@ const EachProject = () => {
                             {projectData.persons === "Individual" && <span> (made by me)</span>}
                             <br />
                             <p>
-                                Skills used :-
+                                <span className='text-[#57D3BC]'>Description :-</span>
                                 <br />
-                                {projectData.skills}
+                                {projectData.description}
                             </p>
                         </div>
 

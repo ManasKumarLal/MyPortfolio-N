@@ -3,10 +3,11 @@ import './LandingPage.css'
 import { TypeAnimation } from 'react-type-animation';
 import { BsLinkedin, BsYoutube, BsGithub, BsWhatsapp } from "react-icons/bs";
 import Button from '../../components/button/Button';
-import BgVideo from './homebg.mp4'
-import IMG1 from './04.jpg'
+import BgVideo from './homebg6.mp4'
+import IMG2 from './profile3.jpg'
 
 const Home = () => {
+
     const skills = [
         ' Full Stack Developer',
         100,
@@ -84,7 +85,9 @@ const Home = () => {
                     </div>
 
                     <div className="image">
-                        <img src={IMG1} alt="" />
+                        <div className="wrapper">
+                            <img src={IMG2} alt="" />
+                        </div>
                     </div>
 
                 </div>

@@ -3,6 +3,7 @@ import './ProjectContent.css'
 import { useNavigate } from 'react-router-dom'
 import { useProjectContext } from '../context/Provider';
 import GlowButton from './GlowButton';
+import { Link as ScrollLink, animateScroll as scroll} from 'react-scroll';
 
 const ProjectContent = () => {
     const navigate = useNavigate();
@@ -20,6 +21,18 @@ const ProjectContent = () => {
             return;
         }
         else setShowMoreOption("");
+    }
+
+    const handleShowMore = () =>{
+        setShowMoreOption("showless")
+        scroll.scrollMore(700, {
+            duration: 0,
+            smooth: true,
+          });
+    }
+
+    const handleShowLess = () =>{
+        setShowMoreOption("showmore")
     }
 
     useEffect(() => {
@@ -49,8 +62,10 @@ const ProjectContent = () => {
                     }
                 </div>
             </section>
-            {showMoreOption === "showmore" && <button onClick={() => setShowMoreOption("showless")} className='showmoreOptions_button'>Show more</button>}
-            {showMoreOption === "showless" && <button onClick={() => setShowMoreOption("showmore")} className='showmoreOptions_button'>Show less</button>}
+            {showMoreOption === "showmore" && <button onClick={handleShowMore} className='showmoreOptions_button'>Show more</button>}
+            <ScrollLink to='project'>
+            {showMoreOption === "showless" && <button onClick={handleShowLess} className='showmoreOptions_button'>Show less</button>}
+            </ScrollLink>
             {showMoreOption === "" && <button></button>}
         </>
     )
