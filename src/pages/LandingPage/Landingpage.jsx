@@ -3,7 +3,7 @@ import './LandingPage.css'
 import { TypeAnimation } from 'react-type-animation';
 import { BsLinkedin, BsYoutube, BsGithub, BsWhatsapp } from "react-icons/bs";
 import Button from '../../components/button/Button';
-import BgVideo from './homebg6.mp4'
+import BgVideo from './homebg3.mp4'
 import IMG2 from './profile3.jpg'
 
 const Home = () => {

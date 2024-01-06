@@ -11,17 +11,6 @@ const projects = [
         persons: "Team",
     },
     {
-        id: "pp-e-commerce-react-redux.netlify.app",
-        imgSrc: "./ProjectAssets/1.png",
-        gitHubSrc: "https://github.com/ManasKumarLal/PP-E-Commerce-React-Redux-N.git",
-        projectSrc: "https://pp-e-commerce-react-redux.netlify.app/",
-        title: "E-com (use Redux)",
-        category: "React JS",
-        level: "Intermediate",
-        description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
-    },
-    {
         id: "pp-chatapp-appwrite.netlify.app",
         imgSrc: "./ProjectAssets/2.png",
         gitHubSrc: "https://github.com/ManasKumarLal/PP-ChatAPP-APPWrite-N.git",
@@ -30,7 +19,29 @@ const projects = [
         category: "MERN Stack",
         level: "Advance",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
+    },
+    {
+        id: "pp-cleanex.netlify.app",
+        imgSrc: "./ProjectAssets/cleanex.png",
+        gitHubSrc: "https://github.com/ManasKumarLal/PP-Cleanex-N.git",
+        projectSrc: "https://pp-cleanex.netlify.app/",
+        title: "Cleanex",
+        category: "CSS",
+        level: "Advance",
+        description: "flex box, grid, transformation, and other important css properties",
+        persons: "Personal",
+    },
+    {
+        id: "pp-e-commerce-react-redux.netlify.app",
+        imgSrc: "./ProjectAssets/1.png",
+        gitHubSrc: "https://github.com/ManasKumarLal/PP-E-Commerce-React-Redux-N.git",
+        projectSrc: "https://pp-e-commerce-react-redux.netlify.app/",
+        title: "E-com (use Redux)",
+        category: "React JS",
+        level: "Intermediate",
+        description: "flex box, grid, transformation, and other important css properties",
+        persons: "Personal",
     },
     {
         id: "pp-todo-with-context-api.netlify.app",
@@ -41,7 +52,7 @@ const projects = [
         category: "React JS",
         level: "Intermediate",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "https://pp-advanced-routing-web.netlify.app",
@@ -52,7 +63,7 @@ const projects = [
         category: "React JS",
         level: "Intermediate",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "pp-password-generator.netlify.app",
@@ -63,7 +74,7 @@ const projects = [
         category: "Javascript",
         level: "Basic",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "ppf-mern-crud-operation.netlify.app",
@@ -74,7 +85,7 @@ const projects = [
         category: "MERN Stack",
         level: "Intermediate",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "pp-todo-app-local-storage.netlify.app",
@@ -85,7 +96,7 @@ const projects = [
         category: "React JS",
         level: "Intermediate",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "pp-mkl-skills-zone-tailwind.netlify.app",
@@ -96,7 +107,7 @@ const projects = [
         category: "Tailwind CSS",
         level: "Intermediate",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "pp-simple-crud-operation-mock-api.netlify.app",
@@ -107,7 +118,7 @@ const projects = [
         category: "React JS",
         level: "Basic",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "pp-simple-landing-page-tailwind.netlify.app",
@@ -118,7 +129,7 @@ const projects = [
         category: "Tailwind CSS",
         level: "Basic",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "pp-canvas-powerfull-animation.netlify.app",
@@ -129,7 +140,7 @@ const projects = [
         category: "Javascript",
         level: "Intermediate",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "pp-text-editor.netlify.app",
@@ -140,7 +151,7 @@ const projects = [
         category: "React JS",
         level: "Advance",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "pp-too-goods.netlify.app",
@@ -151,7 +162,7 @@ const projects = [
         category: "Javascript",
         level: "Intermediate",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "https://pp-bubble-game.netlify.app",
@@ -162,7 +173,7 @@ const projects = [
         category: "Javascript",
         level: "Intermediate",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "pp-quotes-generator.netlify.app",
@@ -173,7 +184,7 @@ const projects = [
         category: "Javascript",
         level: "Basic",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "pp-animated-landing-page.netlify.app",
@@ -184,7 +195,7 @@ const projects = [
         category: "CSS",
         level: "Intermediate",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
     {
         id: "pp-simple-landing-page.netlify.app",
@@ -195,7 +206,7 @@ const projects = [
         category: "CSS",
         level: "Basic",
         description: "flex box, grid, transformation, and other important css properties",
-        persons: "Team",
+        persons: "Personal",
     },
 ]
 
