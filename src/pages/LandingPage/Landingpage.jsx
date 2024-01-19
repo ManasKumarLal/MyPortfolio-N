@@ -3,8 +3,7 @@ import './LandingPage.css'
 import { TypeAnimation } from 'react-type-animation';
 import { BsLinkedin, BsYoutube, BsGithub, BsWhatsapp } from "react-icons/bs";
 import Button from '../../components/button/Button';
-import BgVideo from './homebg3.mp4'
-import IMG2 from './profile3.jpg'
+import BgVideo from './homebg10.mp4'
 
 const Home = () => {
 
@@ -85,9 +84,7 @@ const Home = () => {
                     </div>
 
                     <div className="image">
-                        <div className="wrapper">
-                            <img src={IMG2} alt="" />
-                        </div>
+                            <img src="https://goreg.com/wp-content/uploads/revslider/standing-man-21.png" alt="" />
                     </div>
 
                 </div>

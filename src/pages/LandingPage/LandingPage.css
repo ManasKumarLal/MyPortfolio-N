@@ -1,5 +1,5 @@
 .home_container {
-    height: calc(100vh + 5rem);
+    height: 100vh;
     width: 100%;
     position: relative;
 }
@@ -93,21 +93,15 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
 }
 
-.home_container .content .wrapper {
-    width: 30rem;
-    height: 20rem;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.home_container .content .wrapper img {
-    width: 100%;
-    height: 100%;
+.home_container .content img {
+    width: 65%;
     object-fit: cover;
+    position: absolute;
+    bottom: 0;
 }
-
 
 /* *************************************************************media query **************************************** */
 @media (max-width:1470px) {
