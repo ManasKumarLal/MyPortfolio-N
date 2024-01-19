@@ -106,14 +106,15 @@
 /* *************************************************************media query **************************************** */
 @media (max-width:1470px) {
     .home_container {
-        height: auto;
+        height: 100vh;
         padding-top: 7rem;
         padding-bottom: 7rem;
     }
 
     .home_container .content {
         flex-direction: column-reverse;
-        gap: 5rem;
+        gap: 0;
+        margin-top: 2rem;
     }
 
     .home_container .content .text>div {
@@ -123,6 +124,9 @@
     .home_container .content .image {
         width: 60%;
         justify-content: flex-start;
+    }
+    .home_container .content .image img{
+        width: 15rem;
     }
 }
 
@@ -146,11 +150,6 @@
 
     .home_container .content .image {
         width: 80%;
-    }
-
-    .home_container .content .wrapper {
-        width: 100%;
-        height: 30%;
     }
 
     .home_container .content .text {
