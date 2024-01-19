@@ -101,6 +101,7 @@
     object-fit: cover;
     position: absolute;
     bottom: 0;
+    border-end-end-radius: 50%;
 }
 
 /* *************************************************************media query **************************************** */
