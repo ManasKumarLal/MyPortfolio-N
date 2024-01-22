@@ -13,20 +13,25 @@ import { Link as ScrollLink } from 'react-scroll'
 const App = () => {
 
   const location = useLocation();
-
+  
   return (
     <>
+
       <ScrollLink className='mainGif_wrapper' to="project">
         <img className='mainGif' src={TriGif} alt="error loading" />
       </ScrollLink>
       <div className='mainGif_popup'>Click and see my projects</div>
+
       <ToastContainer theme="dark" className="select-none" />
-      {location.pathname === "/" && <Navbar />}
+
+      {location.pathname === "/" && <Navbar/>}
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/:id' element={<EachProject />} />
       </Routes>
       <Footer />
+
     </>
   )
 }

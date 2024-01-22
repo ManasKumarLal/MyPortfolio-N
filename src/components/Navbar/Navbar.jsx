@@ -6,6 +6,7 @@ import Button from '../button/Button'
 import { Link as ScrollLink } from 'react-scroll';
 import { CiMenuFries } from "react-icons/ci";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
+import AppDownload from './AppDownload'
 
 const Navbar = () => {
   const navbarRef = useRef(null);
@@ -29,7 +30,7 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     }
   }, [prevScrollPos])
-
+  
   return (
     <>
       <div className="nav_container" ref={navbarRef}>
@@ -59,17 +60,21 @@ const Navbar = () => {
         </div>
 
         {/* mobile menu */}
-        {
-          menuToggle
-            ?
-            <div className="mobileMenu">
-              <MdOutlineCloseFullscreen className='.mobileMenu' onClick={() => setMenuToggle(false)} />
-            </div>
-            :
-            <div className="mobileMenu">
-              <CiMenuFries className='.mobileMenu' onClick={() => setMenuToggle(true)} />
-            </div>
-        }
+        <div className='flex items-center gap-3'>
+          <AppDownload />
+          {
+            menuToggle
+              ?
+              <div className="mobileMenu">
+                <MdOutlineCloseFullscreen className='.mobileMenu' onClick={() => setMenuToggle(false)} />
+              </div>
+              :
+              <div className="mobileMenu">
+                <CiMenuFries className='.mobileMenu' onClick={() => setMenuToggle(true)} />
+              </div>
+          }
+        </div>
+
       </div>
 
       <img className={`nav_dustbin ${menuToggle === false && 'nav_dustbin_zoom'}`} src="https://purepng.com/public/uploads/large/purepng.com-trash-cantrash-cansteelplasticdustbinrecyclebiniconclipart-1421526646079jpohr.png" alt="" />
