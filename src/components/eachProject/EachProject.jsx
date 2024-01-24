@@ -12,6 +12,7 @@ const EachProject = () => {
     const [projectData, setProjectData] = useState({});
     const homeIcon = useRef(null);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
+    console.log(id);
 
     // console.log(projectData)
     const getData = () => {
