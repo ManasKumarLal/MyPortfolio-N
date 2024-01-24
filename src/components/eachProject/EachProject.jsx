@@ -88,7 +88,7 @@ const EachProject = () => {
                             <p>
                                 <span className='text-[#57D3BC]'>Description :-</span>
                                 <br />
-                                {projectData?.description}
+                                {projectData?.keywords}
                             </p>
                         </div>
 

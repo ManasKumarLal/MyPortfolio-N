@@ -2,7 +2,6 @@ import React from 'react'
 import './Project.css'
 import Category from './components/Category'
 import ProjectContent from './components/ProjectContent'
-import { FcSearch } from "react-icons/fc";
 import { useProjectContext } from './context/Provider';
 import Level from './components/Level';
 
@@ -22,7 +21,7 @@ const Project = () => {
                 regex.test(project.title) ||
                 regex.test(project.category) ||
                 regex.test(project.level) ||
-                regex.test(project.skills)
+                regex.test(project.keywords)
             );
         });
 
