@@ -23,7 +23,7 @@ const projects = [
     },
     {
         id: "pp-gurukripa-academy",
-        imgSrc: "./ProjectAssets/2.png",
+        imgSrc: "./ProjectAssets/pp-gurukripa-academy.png",
         gitHubSrc: "https://github.com/ManasKumarLal/PP-Gurukripa-Academy-N.git",
         projectSrc: "https://pp-gurukripa-academy.netlify.app/",
         title: "GuruKripa Academy",
