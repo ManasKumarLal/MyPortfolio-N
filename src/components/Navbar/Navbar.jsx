@@ -30,7 +30,7 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     }
   }, [prevScrollPos])
-  
+
   return (
     <>
       <div className="nav_container" ref={navbarRef}>

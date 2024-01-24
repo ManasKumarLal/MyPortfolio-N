@@ -22,6 +22,17 @@ const projects = [
         persons: "Personal",
     },
     {
+        id: "pp-gurukripa-academy",
+        imgSrc: "./ProjectAssets/2.png",
+        gitHubSrc: "https://github.com/ManasKumarLal/PP-Gurukripa-Academy-N.git",
+        projectSrc: "https://pp-gurukripa-academy.netlify.app/",
+        title: "GuruKripa Academy",
+        category: "CSS",
+        level: "Advance",
+        description: "flex box, grid, transformation, and other important css properties",
+        persons: "Personal",
+    },
+    {
         id: "pp-cleanex.netlify.app",
         imgSrc: "./ProjectAssets/cleanex.png",
         gitHubSrc: "https://github.com/ManasKumarLal/PP-Cleanex-N.git",
