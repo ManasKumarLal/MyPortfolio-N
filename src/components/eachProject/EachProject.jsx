@@ -14,7 +14,6 @@ const EachProject = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     console.log(id);
 
-    // console.log(projectData)
     const getData = () => {
         const response = projects.filter(item => item.id === id);
         setProjectData({ ...response[0] })
@@ -60,36 +59,36 @@ const EachProject = () => {
                 <div className="content">
 
                     <div className="image">
-                        <img src={projectData.imgSrc} alt="" />
+                        <img src={`../../../../${projectData.imgSrc}`} alt="" />
                         <div className="redirect">
-                            <a href={projectData.gitHubSrc} target='_blank'><BsGithub className='text-white' />Explore Project Code</a>
-                            <a href={projectData.projectSrc} target='_blank'><FaArrowUpRightFromSquare className='text-white' />Visit Project</a>
+                            <a href={projectData?.gitHubSrc} target='_blank'><BsGithub className='text-white' />Explore Project Code</a>
+                            <a href={projectData?.projectSrc} target='_blank'><FaArrowUpRightFromSquare className='text-white' />Visit Project</a>
                         </div>
                     </div>
 
                     <div className="text">
 
-                        <p className='text-[#57D3BC]'># {projectData.title}</p>
+                        <p className='text-[#57D3BC]'># {projectData?.title}</p>
 
                         <p>
-                            <span className='text-[#57D3BC]'>{projectData.category} </span>
+                            <span className='text-[#57D3BC]'>{projectData?.category} </span>
                             based project
                         </p>
 
                         <div className='overflow_card'>
                             This is an
-                            <span className='text-[#57D3BC]'> {projectData.level} </span>
+                            <span className='text-[#57D3BC]'> {projectData?.level} </span>
                             project using one of my important
-                            <span className='text-[#57D3BC]'> {projectData.category} </span>
+                            <span className='text-[#57D3BC]'> {projectData?.category} </span>
                             skill. One of the
-                            <span className='text-[#57D3BC]'> {projectData.persons} </span>
+                            <span className='text-[#57D3BC]'> {projectData?.persons} </span>
                             projects.
-                            {projectData.persons === "Individual" && <span> (made by me)</span>}
+                            {projectData?.persons === "Individual" && <span> (made by me)</span>}
                             <br />
                             <p>
                                 <span className='text-[#57D3BC]'>Description :-</span>
                                 <br />
-                                {projectData.description}
+                                {projectData?.description}
                             </p>
                         </div>
 

@@ -53,7 +53,7 @@ const ProjectContent = () => {
                                     <img src={item.imgSrc} alt="" onLoad={checkExtensibility} />
                                     <div className="overlay">
                                         <span>{item.title}</span>
-                                        <p onClick={() => navigate(item.id)}>
+                                        <p onClick={() => navigate(`/project/${item.id}`)}>
                                             <GlowButton />
                                         </p>
                                     </div>

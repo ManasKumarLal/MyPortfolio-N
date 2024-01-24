@@ -1,3 +1,4 @@
+// currently not in use
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open('your-app-cache').then((cache) => {
