@@ -13,7 +13,7 @@ import { Link as ScrollLink } from 'react-scroll'
 const App = () => {
 
   const location = useLocation();
-  
+
   return (
     <>
 
@@ -24,7 +24,7 @@ const App = () => {
 
       <ToastContainer theme="dark" className="select-none" />
 
-      {location.pathname === "/" && <Navbar/>}
+      {location.pathname === "/" && <Navbar />}
 
       <Routes>
         <Route path='/' element={<Home />} />

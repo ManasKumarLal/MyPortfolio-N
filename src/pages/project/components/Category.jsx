@@ -2,45 +2,58 @@ import React, { useState } from 'react'
 import './Category.css'
 import { useProjectContext } from '../context/Provider'
 
+const categories = [
+  'All Category',
+  "PRODUCTION",
+  "CSS",
+  "Bootstrap",
+  "Javascript",
+  "React JS",
+  "Tailwind CSS",
+  "Node JS",
+  "MERN Stack"
+]
 
 const Category = () => {
   const { projects, setFilteredProjects } = useProjectContext();
-  const [activeAllCategories, setActiveAllCategories] = useState(true);
+  const [activeCategory, setActiveCategory] = useState("All Category");
 
   const filterProjects = (category) => {
     if (category !== "All Category") {
-      setActiveAllCategories(false);
+      setActiveCategory(category);
       const filteredProjects = projects.filter((item) => item.category === category)
       setFilteredProjects(filteredProjects);
       return;
     }
     setFilteredProjects(projects);
+    setActiveCategory("All Category")
   }
   return (
     <>
-      <div className='project_category_pc'>
-        <button onClick={() => filterProjects("All Category")} className={activeAllCategories ? 'active' : ''}>All Category</button>
-        <button onClick={() => filterProjects("PRODUCTION")}>PRODUCTION</button>
-        <button onClick={() => filterProjects("CSS")}>CSS</button>
-        <button onClick={() => filterProjects("Bootstrap")}>Bootstrap</button>
-        <button onClick={() => filterProjects("Javascript")}>Javascript</button>
-        <button onClick={() => filterProjects("React JS")}>React JS</button>
-        <button onClick={() => filterProjects("Tailwind CSS")}>Tailwind CSS</button>
-        <button onClick={() => filterProjects("Node JS")}>Node JS</button>
-        <button onClick={() => filterProjects("MERN Stack")}>MERN Stack</button>
+      <div
+        className='project_category_pc border-[1px] border-[lightseagreen]'
+      >
+        <div className={`options darkSelector`}>
+          {
+            categories.map((item, index) => (
+              <button className={`${item === activeCategory && 'active'}`} key={index} onClick={() => filterProjects(item)}>{item}</button>
+            ))
+          }
+        </div>
       </div>
 
-      <div className='project_category_mobile'>
-        <select onChange={(e) => filterProjects(e.target.value)}>
-          <option value="All Category" >All Category</option>
-          <option value="CSS">CSS</option>
-          <option value="Bootstrap">Bootstrap</option>
-          <option value="Javascript">Javascript</option>
-          <option value="React JS">React JS</option>
-          <option value="Tailwind CSS">Tailwind CSS</option>
-          <option value="Node JS">Node JS</option>
-          <option value="MERN Stack">MERN Stack</option>
-        </select>
+      <div
+        className='project_category_mobile'
+      >
+        <div className={`options`}>
+          <select onChange={(e) => filterProjects(e.target.value)}>
+            {
+              categories.map((item, index) => (
+                <option key={index} value={item} >{item}</option>
+              ))
+            }
+          </select>
+        </div>
       </div>
     </>
   )

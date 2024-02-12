@@ -30,48 +30,59 @@ const Project = () => {
 
     return (
         <>
-            <div id='project' className="project_container">
+            <div id='Project'>
+                <div className="pageWrapper overflow-hidden relative">
 
-                <div className='sideBar sideBar_pc'>
-                    <div className='w-[90%]'>
-                        <Category />
-                    </div>
-                </div>
+                    <h1 className='badge absolute top-4 left-0 z-10 text-3xl font-bold text-[lightseagreen]'>Demo Projects</h1>
 
-                <div className="project_section">
-
-                    {/* three navbars for switching between devices 👇👇 */}
-                    <div className="navbar search_pc">
-                        <p>Total Results : {filteredProjects?.length}</p>
-                        <div>
-                            <Level />
-                        </div>
-                        <p className='search'>
-                            <input type="search" onChange={searchProjects} placeholder='Search project...' />
-                            {/* <FcSearch className='bg-[#363636] h-[85%] w-[50px] p-1 rounded-r-[10px] cursor-pointer' /> */}
-                        </p>
-                    </div>
-
-                    <div className="navbar search_mobile">
-                        <div className='categories'>
+                    <div className='sideBar sideBar_pc'>
+                        <div className='w-[90%]'>
                             <Category />
                         </div>
-                        <div className='levels'>
-                            <Level />
+                    </div>
+
+                    <div className="project_section">
+
+                        {/* three navbars for switching between devices 👇👇 */}
+                        <div className="navbar search_pc">
+                            <p>Total Results : {filteredProjects?.length}</p>
+                            <div>
+                                <Level />
+                            </div>
+                            <p className='search'>
+                                <input
+                                    type="search"
+                                    onChange={searchProjects}
+                                    placeholder='Search project...'
+                                />
+                            </p>
                         </div>
-                    </div>
 
-                    <div className="navbar search_mobile mt-1">
-                        <p className='search'>
-                            <input type="search" onChange={searchProjects} placeholder='Search project...' />
-                            {/* <FcSearch className='bg-[#363636] h-[85%] w-[50px] p-2 rounded-r-[10px] cursor-pointer' /> */}
-                        </p>
-                        <p className='total_results'>Total Results : {filteredProjects?.length}</p>
-                    </div>
-                    {/* three navbars for switching between devices👆👆 */}
+                        <div className="navbar search_mobile">
+                            <div className='w-[57%]'>
+                                <Category />
+                            </div>
+                            <div className='w-[40%]'>
+                                <Level />
+                            </div>
+                        </div>
 
-                    <div className="project_content">
-                        <ProjectContent />
+                        <div className="navbar search_mobile mt-1">
+                            <p className='search'>
+                                <input
+                                    type="search"
+                                    onChange={searchProjects}
+                                    placeholder='Search project...'
+                                />
+                            </p>
+                            <p className='total_results'>Total Results : {filteredProjects?.length}</p>
+                        </div>
+                        {/* three navbars for switching between devices👆👆 */}
+
+                        <div className="project_content">
+                            <ProjectContent />
+                        </div>
+
                     </div>
 
                 </div>

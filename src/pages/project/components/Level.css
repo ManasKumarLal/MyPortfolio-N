@@ -6,8 +6,6 @@
     font-size: 16px;
     padding: 6px 13px;
     width: 100%;
-    /* appearance: none;
-    -webkit-appearance: none; */
-    /* for older browsers */
     border-radius: 10px;
+    outline: none;
 }

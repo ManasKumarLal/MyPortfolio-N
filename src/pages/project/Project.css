@@ -2,18 +2,22 @@
     --main-project-bg: #0A192E;
 }
 
-.project_container {
+#Project {
+    padding: 2rem 5rem;
+}
+
+#Project .pageWrapper {
     width: 100%;
+    max-width: 110rem;
+    margin: auto;
     height: 100%;
-    background-color: black;
     display: flex;
     justify-content: center;
     user-select: none;
-    padding: 2rem 4rem 2rem 4rem;
     position: relative;
 }
 
-.project_container .sideBar {
+#Project .pageWrapper .sideBar {
     height: full;
     width: 20%;
     display: flex;
@@ -23,55 +27,46 @@
     padding-top: 5.1rem;
 }
 
-.project_container .project_section {
+#Project .pageWrapper .project_section {
     height: 100%;
     width: 80%;
 }
 
-.project_container .project_section .navbar {
+#Project .pageWrapper .project_section .navbar {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.project_container .project_section .search_pc p:first-child {
+#Project .pageWrapper .project_section .search_pc p:first-child {
     width: 160px;
 }
 
-.project_container .project_section .search_mobile {
+#Project .pageWrapper .project_section .search_mobile {
     display: none;
 }
 
-.project_container .project_section .search_mobile .levels {
-    width: 40%;
-}
-
-.project_container .project_section .search_mobile .categories {
-    width: 57%;
-}
-
-.project_container .project_section .navbar input[type="search"] {
+#Project .pageWrapper .project_section .navbar input[type="search"] {
     height: 80%;
     padding: 0px 5%;
     font-size: 15px;
     width: 15vmax;
     border-radius: 10px;
-    color: black;
     outline: none;
 }
 
-.project_container .project_section .navbar .search {
+#Project .pageWrapper .project_section .navbar .search {
     height: 45px;
 }
 
-.project_container .project_section .project_content {
+#Project .pageWrapper .project_section .project_content {
     height: calc(100% - 5rem);
     width: 100%;
     padding: 2rem 0;
 }
 
-.project_container .project_section p {
+#Project .pageWrapper .project_section p {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,45 +76,51 @@
 
 /* ********************************************media query*********************************** */
 @media (max-width:1470px) {
-    .project_container .sideBar {
+    #Project .pageWrapper .sideBar {
         width: 30%;
     }
 
-    .project_container .project_section {
+    #Project .pageWrapper .project_section {
         width: 70%;
     }
 }
 
 @media (max-width:880px) {
-    .project_container .sideBar_pc {
+    #Project .pageWrapper {
+        overflow: visible;
+        padding-top: 5rem;
+    }
+
+    #Project .pageWrapper .badge {
+        top: 1rem;
+        left: 12.5%;
+    }
+
+    #Project .pageWrapper .sideBar_pc {
         display: none;
     }
 
-    .project_container .project_section {
+    #Project .pageWrapper .project_section {
         width: 75%;
     }
 
-    .project_container {
-        padding: 2rem 15px 2rem 15px;
-    }
-
-    .project_container .project_section .search_pc {
+    #Project .pageWrapper .project_section .search_pc {
         display: none;
     }
 
-    .project_container .project_section .search_mobile {
+    #Project .pageWrapper .project_section .search_mobile {
         display: flex;
     }
 
-    .project_container .project_section .search_mobile .search {
+    #Project .pageWrapper .project_section .search_mobile .search {
         width: 57%;
     }
 
-    .project_container .project_section .search_mobile .search input[type="search"] {
+    #Project .pageWrapper .project_section .search_mobile .search input[type="search"] {
         width: 100%;
     }
 
-    .project_container .project_section .search_mobile .total_results {
+    #Project .pageWrapper .project_section .search_mobile .total_results {
         width: 40%;
         border-radius: 10px;
         padding: 4px 0;
@@ -127,8 +128,16 @@
     }
 }
 
-@media (max-width:500px) {
-    .project_container .project_section {
+@media (max-width:700px) {
+    #Project {
+        padding: 2rem 2vmax;
+    }
+
+    #Project .pageWrapper .badge {
+        left: 0;
+    }
+
+    #Project .pageWrapper .project_section {
         width: 100%;
     }
 }

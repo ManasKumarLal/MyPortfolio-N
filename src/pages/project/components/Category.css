@@ -1,5 +1,4 @@
 .project_category_pc {
-    box-shadow: 2px 5px 20px white;
     border-radius: 20px;
     width: 100%;
     display: flex;
@@ -10,24 +9,24 @@
     overflow: hidden;
 }
 
-.project_category_pc button {
+.project_category_pc .options .active {
+    background-color: lightseagreen;
+}
+
+.project_category_pc .options button {
     text-align: center;
     width: 100%;
     padding: 17px 0;
     border-radius: 20px;
-    transition: all 0.3s linear
+    transition: all ease-out 0.3s;
 }
 
-.project_category_pc button:hover {
-    background-color: rgba(255, 255, 255, 0.394);
+.project_category_pc .options button:hover {
+    background-color: rgba(10, 232, 221, 0.231);
 }
 
-.project_category_pc button:focus {
-    background-color: rgba(255, 255, 255, 0.394);
-}
-
-.active {
-    background-color: rgba(255, 255, 255, 0.394);
+.project_category_pc .options button:focus {
+    background-color: lightseagreen;
 }
 
 .project_category_mobile {
@@ -37,10 +36,15 @@
 
 .project_category_mobile select {
     width: 100%;
-    color: black;
     font-size: 16px;
     padding: 6px 13px;
     border-radius: 10px;
+    outline: none;
+}
+
+.project_category_mobile .darkSelector select {
+    background-color: white;
+    color: black;
 }
 
 /* ***********************************media query************************************** */
